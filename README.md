@@ -77,4 +77,4 @@ confident label
     labelListElement.append(labelItem);
 ```
 
-![Sample](public/images/node-vision-sample.gif)
+![Sample](public/images/node-vision-sample2.gif)
