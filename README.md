@@ -53,7 +53,7 @@ module.exports = router;
 
 ```
 
-## Highlighting the Most confident Label than others
+## Highlighting the Most confident Label
 
 The incomming labels are a array with sorted according to their confidence.
 
