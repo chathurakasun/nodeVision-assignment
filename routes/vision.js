@@ -28,20 +28,18 @@ router.post("/classify", function (req, res, next) {
       });
     }
     let imageLabelNames = [];
+    // get the labels array
     const labels = response.Labels;
-
+    // label array sorting according the the "Confidence"
     const sortedLabels = labels.sort((b, a) => a.Confidence - b.Confidence);
 
-    // get first element
-    // const
-
+    // store strings to imagelabelNames array
     sortedLabels.forEach((label) => {
       imageLabelNames.push(
         `${label.Name} : ${label.Confidence.toString().split(".")[0]} %`
       );
     });
-    // console.log(sortedLabels);
-    console.log(imageLabelNames);
+
     return res.json({
       labels: imageLabelNames,
     });

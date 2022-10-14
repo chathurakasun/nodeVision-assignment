@@ -89,13 +89,14 @@ $(() => {
 
             // clear list
             labelListElement.empty();
-            console.log(labels);
+
+            // seperate the most confident first item from others in the array
             const [most, ...others] = labels;
-            console.log(most, others);
+
             // for most confident item\
-            let mostItem = $("<div class='most-confident-item' />");
-            mostItem.text(most);
-            labelListElement.append(mostItem);
+            let mostListItem = $("<div class='most-confident-item' />");
+            mostListItem.text(most);
+            labelListElement.append(mostListItem);
 
             // other label items
             others.forEach((label) => {
